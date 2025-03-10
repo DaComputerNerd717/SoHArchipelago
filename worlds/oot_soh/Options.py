@@ -26,7 +26,7 @@ class KakarikoGate(Choice):
 
 
 class DoorOfTime(Choice):
-    """Closed - The Ocarina of Time, the Song of Time, and all three Spritual Stones are required to open the Door of Time.
+    """Closed - The Ocarina of Time, the Song of Time, and all three Spiritual Stones are required to open the Door of Time.
     
     Song only - play the Song of Time in front of the Door of Time to open it.
     
@@ -48,7 +48,7 @@ class ZorasFountain(Choice):
 
 
 class SleepingWaterfall(Choice):
-    """Closed - Sleeping Waterfall obstructs the entrace to Zora's Domain. Zelda's Lullaby must be played in order to open it
+    """Closed - Sleeping Waterfall obstructs the entrance to Zora's Domain. Zelda's Lullaby must be played in order to open it
     (but only once; then it stays open in both time periods).
     
     Open - Sleeping Waterfall is always open. Link may always enter Zora's Domain."""
@@ -159,7 +159,7 @@ class TriforceTotalPieces(Range):
     """The amount of Triforce pieces that will be placed in the world. 
     
     Keep in mind seed generation can fail if more pieces are placed than there are junk items in the item pool."""
-    display_name = "Tiforce Hunt Total Pieces"
+    display_name = "Triforce Hunt Total Pieces"
     range_start = 1
     range_end = 100
     default = 30
@@ -201,7 +201,7 @@ class BridgeMedallions(Range):
 
 
 class BridgeRewards(Range):
-    """The amount of spirtual stones + medallions required to activate the rainbow bridge"""
+    """The amount of spiritual stones + medallions required to activate the rainbow bridge"""
     display_name = "Bridge Reward Count"
     range_start = 1
     range_end = 9
@@ -227,9 +227,9 @@ class BridgeToken(Range):
 class DungeonEntrances(Choice):
     """Shuffle the pool of dungeon entrances, including Bottom of the Well, Ice Cavern and Gerudo Training Ground.
     
-    Shuffling Ganon's Castle can be enabled seperately.
+    Shuffling Ganon's Castle can be enabled separately.
     
-    Additionally, the entraces of Deku Tree, Fire Temple, Bottom of the Well and Gerudo Training Ground are opend for both child and adult.
+    Additionally, the entrances of Deku Tree, Fire Temple, Bottom of the Well and Gerudo Training Ground are opened for both child and adult.
     
     - Deku Tree will be open for adult after Mido has seen child Link with a sword and shield.
     - Bottom of the Well will be open for adult after playing Song of Storms to the Windmill guy as child.
@@ -256,10 +256,10 @@ class OverworldEntrances(Toggle):
     """Shuffle the pool of Overworld entrances, which corresponds to almost all loading zones between overworld areas.
     
     Some entrances are unshuffled to avoid issues:
-    - Hyrule Casstle Courtyard and Garden entrace
+    - Hyrule Castle Courtyard and Garden entrance
     - Both Market Back Alley entrances
     - Gerudo Valley to Lake Hylia (unless entrances are decoupled)"""
-    display_name = "Overowlrd Entrances"
+    display_name = "Overworld Entrances"
 
 
 class InteriorEntrances(Choice):
@@ -298,7 +298,7 @@ class OverworldSpawns(Toggle):
     
     This stays consistent after saving and loading the game again.
     
-    Keep in mind you may need to temporarily disable the "Remeber Save Location" time saver to \
+    Keep in mind you may need to temporarily disable the "Remember Save Location" time saver to \
     be able to use the spawn positions, especially if they are the only logical way to get to certain areas."""
     display_name = "Overworld Spawns"
 
@@ -367,12 +367,12 @@ class ShuffleToken(Choice):
     option_all = 3
 
 class NightSkullsExpectSunsSong(DefaultOnToggle):
-    """All Golden Skulltulas that require nighttime to appear will only be expect to be collected after \
+    """All Golden Skulltulas that require nighttime to appear will only be expected to be collected after \
     getting Sun's Song."""
     display_name = "Night Skulltula's Expect Sun's Song"
 
 class ShuffleKokiriSword(Toggle):
-    """Suffles the kokiri Sword into the item pool.
+    """Shuffles the kokiri Sword into the item pool.
     
     This will require the use of sticks until the Kokiri Sword is found."""
     display_name = "Shuffle Kokiri Sword"
@@ -425,9 +425,9 @@ class ShuffleWeirdEgg(Toggle):
     """Shuffles the Weird Egg from Malon in to the item pool. Enabling "Skip Child Zelda" disables this feature.
     
     The Weird Egg is required to unlock several events:
-    - Zeld'as Lullaby from Impa
+    - Zelda's Lullaby from Impa
     - Saria's Song in Sacred Forest Meadow
-    - Epon'as Song and chicken minigame at Lon Lon Ranch
+    - Epona's Song and chicken minigame at Lon Lon Ranch
     - Zelda's Letter for Kakariko gate (if set to close)
     - Happy Mask Shop sidequest"""
     display_name = "Shuffle Weird Egg"
@@ -437,12 +437,12 @@ class ShuffleGerudoCard(Toggle):
     """Shuffles the Gerudo Membership Card into the item pool.
     
     The Gerudo Card is required to enter the Gerudo Training Ground, opening the gate \
-    to Haunted Wasteland and the Horsback Archery minigame."""
+    to Haunted Wasteland and the Horseback Archery minigame."""
     display_name = "Shuffle Gerudo Membership Card"
 
 
 class ShuffleFishingPole(Toggle):
-    """Suffles the fishing pole into the item pool.
+    """Shuffles the fishing pole into the item pool.
     
     The fishing pole is required to play the fishing pong minigame."""
     display_name = "Shuffle Fishing Pole"
@@ -470,7 +470,7 @@ class ShuffleFreestandingItems(Choice):
     Dungeon - Only freestanding rupees & hearts that are within dungeons.
     Overworld - Only freestanding rupees & hearts that are outside dungeons.
     All - Shuffle all freestanding rupees & hearts"""
-    display_name = "Shuffle Frestanding Items"
+    display_name = "Shuffle Freestanding Items"
     option_off = 0
     option_dungeons = 1
     option_overworld = 2
@@ -478,12 +478,12 @@ class ShuffleFreestandingItems(Choice):
 
 
 class ShopShuffle(Toggle):
-    """Shuffle items within shops. Items will be shuffled amonst each other or other item pools according to Shop Item Count."""
+    """Shuffle items within shops. Items will be shuffled amongst each other or other item pools according to Shop Item Count."""
     display_name = "Shop Shuffle"
 
 
 class ShopsItemCount(Range):
-    """0 Items - Vanilla shop items will be shuffled among diferent shops.
+    """0 Items - Vanilla shop items will be shuffled among different shops.
     
     1-7 Items - Vanilla shop items will be shuffled among different shops, and each shop will contain 1-7 non-vanilla shop items."""
     display_name = "Shops Item Count"
@@ -493,10 +493,10 @@ class ShopsItemCount(Range):
 
 class ShopsPrices(Choice):
     """Vanilla - The same price as the item it replaced.
-    Cheap Balanced - Prices will range between 0 to 95 rupees, favoriting lower numbers.
+    Cheap Balanced - Prices will range between 0 to 95 rupees, favoring lower numbers.
     Balanced - Prices will range between 0 to 300 rupees favoring lower numbers.
     Fixed - A fixed number.
-    Range - A ranom point between specific ranges."""
+    Range - A random point between specific ranges."""
     display_name = "Shops Prices"
     option_vanilla = 0
     option_cheap_balance = 1
@@ -528,7 +528,7 @@ class ShopsUpperBound(Range):
 
 class ShopsAffordablePrice(Toggle):
     """After choosing a price, set it to the affordable amount based on wallet requirements.
-    Afforable prices per tier: start = 1, adult = 100, giant = 201, tycoon = 501
+    Affordable prices per tier: start = 1, adult = 100, giant = 201, tycoon = 501
     
     Use this to enable wallet tier locking, but make shop items not as expensive as they could be."""
     display_name = "Shops Affordable Prices"
@@ -549,10 +549,10 @@ class ScrubsShuffle(Choice):
 
 class ScrubsPrices(Choice):
     """Vanilla - The same price as the item it replaced.
-    Cheap Balanced - Prices will range between 0 to 95 rupees, favoriting lower numbers.
+    Cheap Balanced - Prices will range between 0 to 95 rupees, favouring lower numbers.
     Balanced - Prices will range between 0 to 300 rupees favoring lower numbers.
     Fixed - A fixed number.
-    Range - A ranom point between specific ranges."""
+    Range - A random point between specific ranges."""
     display_name = "Scrubs Prices"
     option_vanilla = 0
     option_cheap_balance = 1
@@ -584,7 +584,7 @@ class ScrubsUpperBound(Range):
 
 class ScrubsAffordablePrice(Toggle):
     """After choosing a price, set it to the affordable amount based on wallet requirements.
-    Afforable prices per tier: start = 1, adult = 100, giant = 201, tycoon = 501
+    Affordable prices per tier: start = 1, adult = 100, giant = 201, tycoon = 501
     
     Use this to enable wallet tier locking, but make shop items not as expensive as they could be."""
     display_name = "Scrubs Affordable Prices"
@@ -592,7 +592,7 @@ class ScrubsAffordablePrice(Toggle):
 
 class MerchantShuffle(Choice):
     """This setting governs if the Bean Salesman, Medigoron, Granny and the Capet Salesman sell a random item.
-    Beans Only- Only the Bean Salesman will have a check and a pack of Magic Beans will be added to the item pool.
+    Beans Only - Only the Bean Salesman will have a check and a pack of Magic Beans will be added to the item pool.
     All but Beans - Medigoron, Granny and the Carpet Salesman will have checks, a Giant's Knife and pack of bombchus will be \
     added to the item pool, and one of the bottles will contain a blue Potion.
     All - Apply both effects.
@@ -607,10 +607,10 @@ class MerchantShuffle(Choice):
 
 class MerchantPrices(Choice):
     """Vanilla - The same price as the item it replaced.
-    Cheap Balanced - Prices will range between 0 to 95 rupees, favoriting lower numbers.
+    Cheap Balanced - Prices will range between 0 to 95 rupees, favouring lower numbers.
     Balanced - Prices will range between 0 to 300 rupees favoring lower numbers.
     Fixed - A fixed number.
-    Range - A ranom point between specific ranges."""
+    Range - A random point between specific ranges."""
     display_name = "Merchant Prices"
     option_vanilla = 0
     option_cheap_balance = 1
@@ -642,17 +642,17 @@ class MerchantUpperBound(Range):
 
 class MerchantAffordablePrices(Toggle):
     """After choosing a price, set it to the affordable amount based on wallet requirements.
-    Afforable prices per tier: start = 1, adult = 100, giant = 201, tycoon = 501
+    Affordable prices per tier: start = 1, adult = 100, giant = 201, tycoon = 501
     
     Use this to enable wallet tier locking, but make shop items not as expensive as they could be."""
-    display_name = "Merhcant Affordable Prices"
+    display_name = "Merchant Affordable Prices"
 
 class Fishsanity(Choice):
     """Off - Fish will not be shuffled. No changes will be made to fishing behavior.
     Shuffle only Hylian Loach - Allows you to earn an item by catching the Hyrule Loach at the fishing pond and giving it to the owner.
     Shuffle Fishing Pong - The fishing pond's fish will be shuffled. Catching a fish in the fishing pond will grant a reward.
     Shuffle Overworld Fish - Fish in generic grottos and Zora's Domain will be shuffled. Catching a fish in a bottle will give a reward.
-    Shuffle Both - Both overowrld fish and fish in the fishing pond will be shuffled."""
+    Shuffle Both - Both overworld fish and fish in the fishing pond will be shuffled."""
     display_name = "Fishsanity"
     option_off = 0
     option_only_hylian_loach = 1
@@ -688,13 +688,13 @@ class ShuffleBeehives(Toggle):
 
 
 class ShuffleCows(Toggle):
-    """Cows give a randomized item from the pool upon performing Epona's Song in fron of them."""
+    """Cows give a randomized item from the pool upon performing Epona's Song in front of them."""
     display_name = "Shuffle Cows"
 
 
 class ShufflePots(Choice):
     """Pots will drop a randomized item the first time they're broken and collected. This does not include the flying pots. \
-    Pots will have a diffretnt appearance when they hold a randomized item
+    Pots will have a different appearance when they hold a randomized item
     With this option enabled, Ganon's boss key door is moved further up the stairs to allow access to the pots before obtaining \
     Ganon's Boss Key.
     
@@ -710,9 +710,9 @@ class ShufflePots(Choice):
 
 
 class ShuffleFrogRupees(Toggle):
-    """Shuffles 5 Purple Rupees into the item pool, and allows you to eanr items by plaing songs at the Frog Choir
+    """Shuffles 5 Purple Rupees into the item pool, and allows you to earn items by playing songs at the Frog Choir
     
-    This setting does not effect the items earned from playing the Song of Storms and the frog song minigame."""
+    This setting does not affect the items earned from playing the Song of Storms and the frog song minigame."""
     display_name = "Shuffle Frog Song Rupees"
 
 
@@ -728,7 +728,7 @@ class ShuffleAdultTrade(Toggle):
 
 class Shuffle100GSReward(Toggle):
     """Shuffle the item the cursed rich man in the House of Skulltula gives when you have collected all \
-    100 Gold SkullTula Tokens.
+    100 Gold Skulltula Tokens.
     
     You can still talk to him multiple times to get Huge Rupees."""
     display_name = "Shuffle 100 GS Reward"
@@ -768,9 +768,9 @@ class ShuffleDungeonRewards(Choice):
     
     Vanilla - Spiritual Stones and medallions will be given from their respective boss.
     End of Dungeon - Spiritual Stones and medallions will be given as rewards for beating major dungeons. Link \
-    will always start wiht one stone or medallion.
+    will always start with one stone or medallion.
     Any Dungeon - Spiritual Stones and medallions can be found inside any dungeon.
-    Overworld - Spritiual Stones and medallions can only be found out of dungeons.
+    Overworld - Spiritual Stones and medallions can only be found out of dungeons.
     Anywhere - Spiritual Stones and medallions can appear anywhere."""
     display_name = "Shuffle Dungeon Rewards"
     option_vanilla = 0
@@ -802,7 +802,7 @@ class ShuffleSmallKeys(DungeonItem):
 
 class ShuffleFortressKeys(Choice):
     """Vanilla - Thieves' Hideout Keys will appear in their vanilla locations.
-    Any dungeon - Thieves' Hideout Keys can only appear inside of any dungon.
+    Any dungeon - Thieves' Hideout Keys can only appear inside of any dungeon.
     Overworld - Thieves' Hideout Keys can only appear outside of dungeons.
     Anywhere - Thieves' Hideout Keys can appear anywhere in the world."""
     display_name = "Gerudo Fortress Keys"
@@ -822,11 +822,11 @@ class KeyRings(Choice):
     Selecting key ring for dungeons will have no effect if small keys are set to Start With or Vanilla.
     
     If Gerudo Fortress Carpenters is set to Normal, and Gerudo Fortress Keys is set to anything other than Vanilla, then the maximum amount \
-    of Key Rings that can be selected by Count wwill be 9. Otherwise the maximum amount of Key rings will be 8."""
+    of Key Rings that can be selected by Count will be 9. Otherwise the maximum amount of Key rings will be 8."""
     display_name = "Key Rings"
     option_off = 0
     option_count = 1
-    option_selction = 2
+    option_selection = 2
 
 class KeyRingCount(Range):
     display_name = "Keyring Dungeon Count"
@@ -912,10 +912,10 @@ class CompleteMaskQuest(DefaultOnToggle):
 
 
 class SkipScarecrowSong(Toggle):
-    """Start with the ability to summom Pierre the Scarecrow. Pulling out an Ocaina in the usual locations will automatically \
+    """Start with the ability to summon Pierre the Scarecrow. Pulling out an Ocarina in the usual locations will automatically \
     summon him.
     
-    With "Shuffle Ocarina Buttons" enabled, you'll need at least two Ocaina buttons to summon him.+"""
+    With "Shuffle Ocarina Buttons" enabled, you'll need at least two Ocarina buttons to summon him.+"""
     display_name = "Skip Scarecrow's Song"
 
 
@@ -952,7 +952,7 @@ class IceTraps(Choice):
 
 
 class GossipStoneHints(Choice):
-    """Allows Gossip Stones to privde hints on item locations. Hints mention "Way of the Hero" indicates \
+    """Allows Gossip Stones to provide hints on item locations. Hints mention "Way of the Hero" indicates \
     a location that holds an item required to beat the seed.
     
     No hints - No hints will be given at all.
@@ -1031,7 +1031,7 @@ class FullWallets(Toggle):
 
 class BombchuBag(Toggle):
     """Bombchus require their own bag to be found before use. Without this setting, any Bombchu requirement is \
-    filled by Bomb Bag + a renewable sourc e of Bombchus."""
+    filled by Bomb Bag + a renewable source of Bombchus."""
     display_name = "Bombchu Bag"
 
 
@@ -1058,7 +1058,7 @@ class InfiniteUpgrades(Choice):
     """Adds upgrades that hold infinite quantities of items (bombs, arrows, etc.).
     
     Progressive - The infinite upgrades are obtained after getting the last normal capacity upgrade.
-    Condensed Progressive - The infinite upgrades are obtained as the first capacity upgrade (doesn't applyy to the infinite wallet or infinite magic)."""
+    Condensed Progressive - The infinite upgrades are obtained as the first capacity upgrade (doesn't apply to the infinite wallet or infinite magic)."""
     display_name = "InfiniteUpgrades"
     option_off = 0
     option_progressive = 1
@@ -1201,7 +1201,7 @@ class SoHOptions(PerGameCommonOptions):
     decoupled_entrances: DecoupleEntrances
     mixed_entrance_pools: MixedEntrancePools
     entrance_pool_set: EntrancePoolSet
-    suffle_songs: ShuffleSongs
+    shuffle_songs: ShuffleSongs
     shuffle_token: ShuffleToken
     night_skulls_sun_song: NightSkullsExpectSunsSong
     shuffle_kokiri_sword: ShuffleKokiriSword
@@ -1217,7 +1217,7 @@ class SoHOptions(PerGameCommonOptions):
     shuffle_stick_bag: ShuffleStickBag
     shuffle_nut_bag: ShuffleNutBag
     shuffle_freestanding: ShuffleFreestandingItems
-    shop_shuflle: ShopShuffle
+    shop_shuffle: ShopShuffle
     shops_item_count: ShopsItemCount
     shops_prices: ShopsPrices
     shops_fixed_price: ShopsFixedPrice
@@ -1233,7 +1233,7 @@ class SoHOptions(PerGameCommonOptions):
     merchant_fixed_price: MerchantFixedPrice
     merchant_lower_bound: MerchantLowerBound
     merchant_upper_bound: MerchantUpperBound
-    fishanity: Fishsanity
+    fishsanity: Fishsanity
     pond_fish_count: PondFishCount
     pond_age_split: PondAgeSplit
     shuffle_beehives: ShuffleBeehives
